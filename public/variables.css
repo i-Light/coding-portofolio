@@ -1,0 +1,15 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --dark-gray: #1e242e;
+    --light-gray: #a0a7b3;
+}
+
+/* Declare the @font-face rule for the custom font */
+@font-face {
+    font-family: 'saira';
+    src: url('/assets/fonts/Saira-VariableFont_wdth\,wght.ttf') format('tff'),
+         url('assets/fonts/Saira-VariableFont_wdth\,wght.ttf') format('tff');
+    font-weight: 100 900;
+    font-stretch: 50% 125%;
+  }
