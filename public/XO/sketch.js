@@ -1,27 +1,27 @@
 let xo, images;
-// const socket = io('http://localhost:3000');
-const socket = io('https://test-fyni.onrender.com');
+const socket = io('https://moustafa-khaled.glitch.me');
 
 const p5Container = document.querySelector("#p5-container");
-// const centerP5Container = document.querySelector("#center-p5-container");
-// let [w,h] = [centerP5Container.clientWidth, centerP5Container.clientHeight]
-// let size = min(w,h)
+const centerP5Container = document.querySelector("#center-p5-container");
+let [w,h] = [centerP5Container.clientWidth, centerP5Container.clientHeight]
+let size = Math.min(w,h)
+size = 300;
 
 function initialize_XO(){
-  xo = new XO(Width = 300/1.2, grid_spacing = 3, images);
+  xo = new XO(Width = size/1.2, grid_spacing = 3, images);
   socket.on("update", (data) => {
     xo.update(data);
   });
 }
 function preload() {
-  let path = "/assets/images/"
-  let image = ['X', "O"]
+  let path = "https://cdn.glitch.global/3f298fdb-189f-403e-b844-b7641a3ad0f5/"
+  let pieces = ['X.png?v=1702030444070', "O.png?v=1702030432708"]
   images = {}
-  image.forEach( name => Object.assign(images, {[name]:loadImage(`${path}${name}.png`)}) )
+  pieces.forEach( name => Object.assign(images, {[name[0]]:loadImage(`${path}${name}`)}) )
 }
 
 function setup() {
-  let cnv = createCanvas(300/1.2, 300/1.2);
+  let cnv = createCanvas(size/1.2, size/1.2);
   cnv.parent(p5Container);
   initialize_XO();
   stroke(50);
@@ -153,11 +153,7 @@ class XO {
       fill(...clr);
       square(...pos, this.grid_spacing);
       this.showPieces(this.block[serial], pos);
-      if (this.block[serial]==0){
-        textSize(32);
-        fill("cyan");
-      text(serial, pos[0]+center,pos[1]+center);
-      }
+      
     }
     if(this.GameOver){
       let txt = (this.GameOver === "TIE")?this.GameOver:`${this.GameOver} WINS`

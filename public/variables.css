@@ -1,15 +1,33 @@
 :root {
-    --black: #000;
-    --white: #fff;
+    --black: #000000;
+    --white: #ffffff;
     --dark-gray: #1e242e;
     --light-gray: #a0a7b3;
 }
 
 /* Declare the @font-face rule for the custom font */
+/* convert with https://cloudconvert.com/ttf-to-woff2*/
 @font-face {
     font-family: 'saira';
-    src: url('/assets/fonts/Saira-VariableFont_wdth\,wght.ttf') format('tff'),
-         url('assets/fonts/Saira-VariableFont_wdth\,wght.ttf') format('tff');
+    src: url("https://cdn.glitch.global/3f298fdb-189f-403e-b844-b7641a3ad0f5/Saira-VariableFont_wdth%2Cwght.woff2?v=1702036714548") format('woff2');
     font-weight: 100 900;
-    font-stretch: 50% 125%;
+    font-stretch: 50 125;
   }
+
+@font-face {
+    font-family: 'BandeinsSans';
+    src: url("https://cdn.glitch.global/3f298fdb-189f-403e-b844-b7641a3ad0f5/BandeinsSansVariable.woff2?v=1702036971910") format('woff2');
+    font-weight: 200 800;
+    font-stretch: 100 800;
+  }
+
+@font-face {
+    font-family: 'BandeinsStrange';
+    src: url("https://cdn.glitch.global/3f298fdb-189f-403e-b844-b7641a3ad0f5/BandeinsStrangeVariable.woff2?v=1702036971230") format('woff2');
+    font-weight: 200 800;
+    font-stretch: 100 800;
+  }
+
+
+
+

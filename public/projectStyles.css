@@ -1,24 +1,42 @@
-@import '../../variables.css';
+@import 'variables.css';
+
+
+body{
+  overflow:hidden;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  
+}
 
 #Name{
+  position: relative;
   line-height: 1.2;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 100;
+  margin:0;
+  
 }
 #Name:hover{
   font-weight: 100;
 }
 h1{
+  position:absloute;
   font-size: 3.2rem;
+  margin:0;
+  padding: 1rem;
 }
 .center-p5-container{
+  overflow:hidden;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-  /* border: 1px solid bisque; */
+  width:100%;
+/*   border: 1px solid bisque; */
 }
 .p5-container{
   margin: 0;

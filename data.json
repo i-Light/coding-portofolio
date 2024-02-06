@@ -1,0 +1,18 @@
+{
+  "chess": {
+    "current_game": {
+      
+    },
+    "old_games":{
+    
+    }
+  },
+  "xo": {
+    "current_game": {
+      
+    },
+    "old_games":{
+    
+    }
+  }
+}

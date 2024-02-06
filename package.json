@@ -1,18 +1,18 @@
 {
-    "name": "server",
-    "version": "1.0.0",
-    "description": "server holding multiplayer games and apps created as showcase for Moustafa Khaled",
-    "main": "server.js",
-    "scripts": {
-        "start": "node server.js",
-        "build": "echo 'Bulding.... (not actually at the moment)'"
-    },
-    "keywords": [],
-    "author": "Moustafa Khaled",
-    "license": "ISC",
-    "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.18.2",
-        "socket.io": "^4.7.2"
-    }
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server holding multiplayer games and apps created as showcase for Moustafa Khaled",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Bulding.... (not actually at the moment)'"
+  },
+  "keywords": [],
+  "author": "Moustafa Khaled",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
 }
